@@ -1,31 +1,26 @@
 from scapy.all import *
+import sys
 
 dst = '198.13.0.14'
-dport = 10000
+dport = int(sys.argv[1])
+
+seq = 12345
 
 # 3 way handshake
 ip = IP(dst=dst)
-syn = TCP(dport=dport, flags='S', seq=1234)
-synack = sr1(ip/syn)
-print(synack.show())
-ack = ip/TCP(dport=dport, flags='A', seq=synack.ack, ack=synack.seq+1)
-print(ack.show())
-send(ack)
+synack = sr1(IP(dst=dst)/TCP(dport=dport, flags='S', seq=seq))
+send(IP(dst=dst)/TCP(dport=dport, flags='A', seq=synack.ack, ack=synack.seq+1), count=1)
 
-#ip = IP(dst=dst, tos=int('011110' + '11', 2))
-#tcp = TCP(dport=dport, flags='EC')
-#
-#for i in range(2):
-#    ans = sr1(ip/tcp/b'a', timeout=2)
-#    print(ans)
-#ans = sr1(ip/tcp/b'asd')
-#print(ans)
-#
-# connection close
+seq = synack.ack
+ack = synack.seq + 1
+ip = IP(dst=dst, tos=int('011110' + '11', 2))
+for i in range(3):
+    send(ip/TCP(dport=dport, flags='PAEC', seq=seq, ack=ack)/'H')
+    seq = seq + 1
+    ans, unans = sniff(filter='tcp and host ' + dst, count=2)
+    pkt = ans[0]
+    ack = pkt.seq + len(pkt[Raw])
+data = sr1(ip/TCP(dport=dport, flags='PAEC', seq=seq, ack=ack)/'asd')
+seq += 3
 
-#ip = IP(dst=dst)
-#fin = TCP(dport=dport, flags='F', seq=1234)
-#finack = sr(ip/fin, timeout=2)[1]
-#print(finack)
-#ack = TCP(dport=dport, flags='A', seq=finack.ack, ack=finack.seq+1)
-#send(ip/finack)
+send(ip/TCP(dport=dport, flags='R', seq=seq, ack=ack))
