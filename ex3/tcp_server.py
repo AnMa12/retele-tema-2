@@ -17,7 +17,7 @@ sock.listen(1)
 conexiune, address = sock.accept()
 logging.info("Handshake cu %s", address)
 while True:
-    data = conexiune.recv(1)
+    data = conexiune.recv(1024)
     logging.info('Content primit: "%s"', data)
     conexiune.send(b'Y')
 conexiune.close()
