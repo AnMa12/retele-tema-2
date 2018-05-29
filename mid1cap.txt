@@ -1,0 +1,23 @@
+tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
+listening on eth0, link-type EN10MB (Ethernet), capture size 262144 bytes
+ARP, Request who-has 198.13.0.14 tell 198.13.0.15, length 28
+ARP, Reply 198.13.0.14 is-at 02:42:c6:0d:00:0e, length 28
+IP 198.13.0.15.20 > 198.13.0.14.3453: Flags [S], seq 12345, win 8192, length 0
+IP 198.13.0.14.3453 > 198.13.0.15.20: Flags [S.], seq 1936226971, ack 12346, win 29200, options [mss 1460], length 0
+IP 198.13.0.15.20 > 198.13.0.14.3453: Flags [.], ack 1936226972, win 8192, length 0
+IP 198.13.0.15.20 > 198.13.0.14.3453: Flags [P.EW], seq 12346:12347, ack 1936226972, win 8192, length 1
+IP 198.13.0.14.3453 > 198.13.0.15.20: Flags [.], ack 12347, win 29200, length 0
+IP 198.13.0.14.3453 > 198.13.0.15.20: Flags [P.], seq 1936226972:1936226973, ack 12347, win 29200, length 1
+IP 198.13.0.14.3453 > 198.13.0.15.20: Flags [P.], seq 1936226972:1936226973, ack 12347, win 29200, length 1
+IP 198.13.0.14.3453 > 198.13.0.15.20: Flags [P.], seq 1936226972:1936226973, ack 12347, win 29200, length 1
+IP 198.13.0.15.20 > 198.13.0.14.3453: Flags [P.EW], seq 12347:12348, ack 1936226973, win 8192, length 1
+IP 198.13.0.14.3453 > 198.13.0.15.20: Flags [P.], seq 1936226973:1936226974, ack 12348, win 29200, length 1
+IP 198.13.0.14.3453 > 198.13.0.15.20: Flags [P.], seq 1936226973:1936226974, ack 12348, win 29200, length 1
+IP 198.13.0.14.3453 > 198.13.0.15.20: Flags [P.], seq 1936226973:1936226974, ack 12348, win 29200, length 1
+IP 198.13.0.15.20 > 198.13.0.14.3453: Flags [P.EW], seq 12348:12349, ack 1936226974, win 8192, length 1
+IP 198.13.0.14.3453 > 198.13.0.15.20: Flags [P.], seq 1936226974:1936226975, ack 12349, win 29200, length 1
+IP 198.13.0.14.3453 > 198.13.0.15.20: Flags [P.], seq 1936226974:1936226975, ack 12349, win 29200, length 1
+IP 198.13.0.14.3453 > 198.13.0.15.20: Flags [P.], seq 1936226974:1936226975, ack 12349, win 29200, length 1
+IP 198.13.0.15.20 > 198.13.0.14.3453: Flags [P.EW], seq 12349:12352, ack 1936226975, win 8192, length 3
+IP 198.13.0.14.3453 > 198.13.0.15.20: Flags [P.], seq 1936226975:1936226976, ack 12352, win 29200, length 1
+IP 198.13.0.15.20 > 198.13.0.14.3453: Flags [R], seq 12352, win 8192, length 0

@@ -1,0 +1,25 @@
+tcpdump: listening on eth0, link-type EN10MB (Ethernet), capture size 262144 bytes
+10:28:25.850027 ARP, Ethernet (len 6), IPv4 (len 4), Request who-has 198.13.13.1 tell 198.13.0.15, length 28
+10:28:25.850055 ARP, Ethernet (len 6), IPv4 (len 4), Reply 198.13.13.1 is-at 02:42:69:50:e6:95, length 28
+10:28:25.864127 ARP, Ethernet (len 6), IPv4 (len 4), Request who-has 198.13.13.1 (ff:ff:ff:ff:ff:ff) tell 198.13.0.15, length 28
+10:28:25.864153 ARP, Ethernet (len 6), IPv4 (len 4), Reply 198.13.13.1 is-at 02:42:69:50:e6:95, length 28
+10:28:25.910048 ARP, Ethernet (len 6), IPv4 (len 4), Request who-has 198.13.0.14 tell 198.13.0.15, length 28
+10:28:25.910076 ARP, Ethernet (len 6), IPv4 (len 4), Reply 198.13.0.14 is-at 02:42:c6:0d:00:0e, length 28
+10:28:25.919533 ARP, Ethernet (len 6), IPv4 (len 4), Request who-has 198.13.0.14 (ff:ff:ff:ff:ff:ff) tell 198.13.0.15, length 28
+10:28:25.919555 ARP, Ethernet (len 6), IPv4 (len 4), Reply 198.13.0.14 is-at 02:42:c6:0d:00:0e, length 28
+10:28:25.950222 ARP, Ethernet (len 6), IPv4 (len 4), Reply 198.13.0.14 is-at 02:42:c6:0d:00:0f, length 28
+10:28:25.980391 ARP, Ethernet (len 6), IPv4 (len 4), Reply 198.13.13.1 is-at 02:42:c6:0d:00:0f, length 28
+10:28:28.940831 IP (tos 0x0, ttl 64, id 25130, offset 0, flags [DF], proto UDP (17), length 66)
+    198.13.0.14.56526 > 192.168.0.1.53: [bad udp cksum 0x8704 -> 0xc099!] 1451+ AAAA? moodle.fmi.unibuc.ro. (38)
+10:28:28.940847 IP (tos 0x0, ttl 63, id 25130, offset 0, flags [DF], proto UDP (17), length 66)
+    198.13.0.14.56526 > 192.168.0.1.53: [bad udp cksum 0x8704 -> 0xc099!] 1451+ AAAA? moodle.fmi.unibuc.ro. (38)
+10:28:28.941017 IP (tos 0x0, ttl 64, id 25131, offset 0, flags [DF], proto UDP (17), length 66)
+    198.13.0.14.33801 > 192.168.0.1.53: [bad udp cksum 0x8704 -> 0x9d86!] 33182+ A? moodle.fmi.unibuc.ro. (38)
+10:28:28.941021 IP (tos 0x0, ttl 63, id 25131, offset 0, flags [DF], proto UDP (17), length 66)
+    198.13.0.14.33801 > 192.168.0.1.53: [bad udp cksum 0x8704 -> 0x9d86!] 33182+ A? moodle.fmi.unibuc.ro. (38)
+10:28:30.013996 ARP, Ethernet (len 6), IPv4 (len 4), Reply 198.13.0.14 is-at 02:42:c6:0d:00:0f, length 28
+10:28:30.044183 ARP, Ethernet (len 6), IPv4 (len 4), Reply 198.13.13.1 is-at 02:42:c6:0d:00:0f, length 28
+
+16 packets captured
+16 packets received by filter
+0 packets dropped by kernel
